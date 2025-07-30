@@ -1,0 +1,58 @@
+# 🔐 Securing Cisco Switch Management Access
+
+## 🔧 Description
+This project demonstrates key techniques for securing Cisco switch management, including:
+- Enabling SSH and disabling Telnet
+- Configuring port security
+- Isolating switch management via VLAN 99
+
+
+## 🖥️ Lab Topology
+- 1 Cisco switch
+- 4 PCs (Admin PC on VLAN 99, others on VLANs 10 & 20)
+- Separate VLAN for management interface
+- Port security configured on all access ports
+
+## 🚀 Configuration Summary
+
+### SSH Setup:
+- Created RSA keys
+- Enabled SSH version 2
+- Used `login local` and strong credentials
+
+### Port Security:
+- One MAC per port
+- Sticky MAC enabled
+- Shutdown on violation
+
+### VLAN Management:
+- VLAN 99 for management
+- Management interface IP: 192.168.99.10
+
+## 📷 Screenshots
+- CLI output of SSH login
+- Port shutdown after violation
+- VLAN assignment
+
+## ✅ Verification Steps
+- SSH into switch from PC-Admin
+- Unplug and replug device to trigger port violation
+- Ping between VLANs (should be blocked)
+
+## 🗃️ Files Included
+- `.gns3project` file
+- Configuration `.cfg` files
+- Topology image
+- README.md
+
+## 🧠 Lessons Learned
+- How to secure switch management planes
+- VLAN isolation for admin access
+- Using sticky MACs and violation actions
+
+## 🔗 LinkedIn Post Sample
+> 🔐 New Lab: Switch Management Security with SSH & Port Security  
+> Built in GNS3 using Cisco IOS  
+> Configured SSH, port security, VLAN isolation & tested secure access  
+> 👉 GitHub: [Your GitHub Repo Link]  
+> #Cisco #GNS3 #SwitchSecurity #Networking #SSH #ITLab #CyberSecurity #GitHubProjects
